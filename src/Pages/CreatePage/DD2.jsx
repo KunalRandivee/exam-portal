@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import DD2 from "./DD2";
 
-const DD1 = () => {
+const DD2 = () => {
   const [value, setValue] = useState(null);
 
   const options = [
-    { value: "JAVA", label: "Java" },
-    { value: "C", label: "C" },
-    { value: "C++", label: "C++" },
-    { value: "C#", label: "C#" },
+    { value: "", label: "Select" },
+    { value: "MCQ", label: "Mcq" },
+    { value: "CODING", label: "Coding" },
+    { value: "FILL THE CODE", label: "Fill the code" },
   ];
 
   const myStyle = {
@@ -17,18 +16,18 @@ const DD1 = () => {
   };
 
   return (
-    <div style={{ margin: 20, paddingbottom: "50px" }}>
-      <h3>Select The Language:</h3>
+    <div style={{ margin: 20 }}>
+      <h3>Select Type of Question:</h3>
       <Select
         options={options}
         styles={myStyle}
         defaultValue={value}
-        placeholder="Select The Language"
+        placeholder="Select Type of Question"
         onChange={setValue}
       />
-      <DD2 />
     </div>
   );
 };
 
-export default DD1;
+export default DD2;
+
